@@ -1,1 +1,280 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Project</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<style type="text/css">
 
+			body {
+				line-height: 1.8rem;
+				height: 100%;
+			}
+
+			#kapcsolat a:hover {
+				text-decoration: none;
+				transform: scale(1.3,1.3);
+				transition: all 0.8s ease-in-out;
+			}
+
+			.parallax {
+			    /* The image used */
+			    background-image: url('bringa29.jpg');
+
+			    /* Full height */
+			    height: 100%; 
+
+			    /* Create the parallax scrolling effect */
+			    background-attachment: fixed;
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			}
+
+		</style>
+	</head>
+	<body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+		<!-- navigációs sáv -->
+		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">			
+			<ul class="navbar-nav">
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#bringatip">Bringa típusok</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#szerviz">Szervíz</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#velemeny">Vélemények</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#rendel">Rendelés</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#kapcsolat">Kapcsolat</a>
+				</li>
+			</ul>
+		</nav>
+		<!-- VÉGE -->
+
+		<!-- oldal teteje -->
+		<div id="kep" class="jumbotron-fluid text-center img-fluid text-uppercase mb-2" style="font-family: 'Bitter', serif; height: 100%">
+			<img src="bringa29.jpg" alt="bringa" style="width: 100%; height: 100%; background-position: center; background-size: cover; background-repeat: no-repeat; background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5));">
+			<div class="card-img-overlay justify-content-center text-light" style="height: 100%; margin-top: 200px;">
+				<h1 class="h1 my-5" style="font-size: 4rem; font-weight: bold;">Építs egyedi kerékpárt!</h1>
+				<h4 class="h4">Ha nem találsz magadnak, vagy nincs választék, vagy csak mert szeretnél különleges lenni....</h4>
+				<h3 class="h3 my-5">Akkor készítsd el magadnak álmaid bringáját!</h3>
+			</div>
+		</div>
+		<!-- VÉGE -->
+
+		<!-- bringa tipusok -->
+		<div id="bringatip" class="container my-3 shadow p-4 mb-4" style="padding-top: 50px;">
+			<h3 class="h3 mt-3">Bringa típusok</h3>
+
+			<!-- utcai -->
+			<div class="row my-3" style="height: 300px">
+				<div class="col-4">
+					<img class="mt-2" src="bringa16.jpg" style="height: 75%; width: 100%; border-radius: 0 0 10px 0;">
+				</div>
+				<div class="col-8">
+					<div class="container">
+						<p class="text-justify mt-1 ml-5"><b>Utcai cirkáló</b><br><br>
+						Kis távolságok megtételére, mindennapos városi használatra alkalmas, strapabíró és olcsó gépek. Mivel gyakran szállítanak rajtuk terhet, jellemzően nehezek a sportcélra gyártott kerékpárokhoz képest. Bevásárló kerékpárnak is nevezik a sokszor gyárilag kormányra szerelt csomagtartó-kosár miatt.</p>
+					</div>
+				</div>
+			</div>
+			<!-- utcai vége -->
+
+			<hr style="width: 75%">
+
+			<!-- verseny -->
+			<div class="row my-3" style="height: 300px">
+				<div class="col-8">
+					<div class="container">
+						<p class="text-justify mt-1 ml-5"><b>Országúti suhanó</b><br><br>
+						A legkönnyebb és leggyorsabb kerékpár. Vékony gumija, a váz és a kormány kiképzése, minimális légellenállása az országúton való gyors haladást teszik lehetővé. A "versenybicikli" szón általában ezt a típust értik, bár természetszerűleg nem csak versenyre használják, illetve más biciklitípusokkal is rendeznek versenyeket.</p>
+					</div>
+				</div>
+				<div class="col-4">
+					<img class="mt-2" src="bringa11.jpg" style="height: 75%; width: 100%; border-radius: 10px 0 0 10px;">
+				</div>
+			</div>
+			<!-- verseny vége -->
+
+			<hr style="width: 75%">
+
+			<!-- MTB -->
+			<div class="row my-3" style="height: 300px">
+				<div class="col-4">
+					<img class="mt-2" src="bringa10.jpg" style="height: 85%; width: 100%; border-radius: 0 10px 0 0;">
+				</div>
+				<div class="col-8">
+					<div class="container">
+						<p class="text-justify mt-1 ml-5"><b>Terep bajnoka</b><br><br>
+						A masszív felépítés, és a vastag, tipikusan 26"-os (ritkán 29"-es) kerekek alkalmassá teszik a terepen való biciklizésre, de hosszú távú országúti közlekedésre ezek a kerékpárok nem optimálisak. Az egyik legelterjedtebb kerékpárfajta.</p>
+					</div>
+				</div>
+			</div>
+			<!-- MTB vége -->
+		</div>
+		<!-- VÉGE -->
+
+		<!-- parallax -->
+		<div class="parallax"></div>
+		<!-- parallax vége -->
+
+		<!-- szervíz -->
+		<div id="szerviz" class="container my-3 shadow p-4 mb-4" style="height: 800px; padding-top: 70px;">
+			<h3 class="h3 mt-3">Szervíz</h3>
+			<div class="row" style="height: 20%">
+				<div class="col-3 my-3">
+					<img class="" src="bringa13.jpg" style="height: 90%; width: 80%; border-radius: 0 10px 10px 0">
+				</div>
+				<div class="col">
+					<p class="text-justify mt-3 ml-3"><b>Ha még nem döntöttél!</b><br><br>
+					Nem tudod melyiket szeretnéd! Gyere el hozán, segítünk a választásban! Megnézzük a lehetőségeket, pro és kontra!</p>
+				</div>
+			</div>
+
+			<hr style="width: 75%">
+
+			<div class="row" style="height: 20%">
+				<div class="col-3 my-3">
+					<img class="" src="bringa100.jpg" style="height: 100%; width: 80%; border-radius: 0 10px 10px 0">
+				</div>
+				<div class="col">
+					<p class="text-justify mt-3 ml-3"><b>Ha eldöntötted!</b><br><br>
+					Döntöttél, hogy melyiket! De nem tudod, hogy fogj hozzá! Gyere és segítünk megtervezni, kiválasztani a megfelelő alkatrészeket</p>
+				</div>
+			</div>
+
+			<hr style="width: 75%">
+
+			<div class="row" style="height: 20%">
+				<div class="col-3 my-3">
+					<img class="" src="bringa1001.jpg" style="height: 100%; width: 80%; border-radius: 0 10px 10px 0">
+				</div>
+				<div class="col">
+					<p class="text-justify mt-3 ml-3"><b>Ha kell a szakértelem!</b><br><br>
+					Megvan mindened, de nem mesrz nekiállni, mert nem tudod, hogy és mit kell csinálni az új alkatrészeiddel? Gyere, segítünk!</p>
+				</div>
+			</div>
+
+			<hr style="width: 75%">
+
+			<div class="row" style="height: 20%">
+				<div class="col-3 my-3">
+					<img class="" src="bringa33.jpg" style="height: 100%; width: 80%; border-radius: 0 10px 10px 0">
+				</div>
+				<div class="col">
+					<p class="text-justify mt-3 ml-3"><b>Ha szervizelni kell!</b><br><br>
+					Ahhoz, hogy hosszú idejig élvezd a bringád nyújtotta élményt, szükség van az időszakos szervízek elvégzésére. Megfelelő szakértelemmel rendelkezünk, hozzd hozzánk a bringádat bizalommal!</p>
+				</div>
+			</div>
+		</div>
+		<!-- VÉGE -->
+
+		<br><br>
+
+		<!-- vélemények -->
+		<div id="velemeny" class="container my-3 shadow p-4 mb-4" style="height: 500px; padding-top: 70px;">
+			<h3 class="h3 mt-3">Vásárlói vélemények</h3>
+			<div class="row my-3" style="height: 40%">
+				<div class="col-2 my-3">
+					<img src="bringa12.jpg" style="width: 100%; height: 75%; border-radius: 0 0 10px 0">
+				</div>
+				<div class="col-4 my-3">
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="col-2 my-3">
+					<img src="bringa4.jpg" style="width: 100%; height: 75%; border-radius: 0 0 10px 10px">
+				</div>
+				<div class="col-4 my-3">
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+			</div>
+
+			<hr style="width: 75%">
+
+			<div class="row my-3" style="height: 40%">
+				<div class="col-4 my-3">
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="col-2 my-3">
+					<img src="bringa31.jpg" style="width: 100%; height: 75%; border-radius: 10px 10px 0 0">
+				</div>
+				<div class="col-4 my-3">
+					<p class="text-justify">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+				</div>
+				<div class="col-2 my-3">
+					<img src="bringa2.jpg" style="width: 100%; height: 75%; border-radius: 10px 0 0 0">
+				</div>
+			</div>
+		</div>
+		<!-- VÉGE -->
+
+		<br><br>
+
+		<!-- rendelés -->
+		<div id="rendel" class="container my-3 shadow p-4 mb-4" style="padding-top: 70px;">
+			<h3 class="h3 my-3 text-center">Termék rendelése</h3>
+			<div class="container" style="width: 50%">
+			  	<form action="/action_page.php">
+			  		<div class="form-group">
+			      		<label for="email">Név:</label>
+			      		<input type="text" class="form-control" id="nev" name="name">
+			    	</div>
+			    	<div class="form-group">
+			      		<label for="email">Email:</label>
+			      		<input type="email" class="form-control" id="email" name="email">
+			    	</div>
+			    	<div class="form-group">
+			      		<label for="email">Telefonszám:</label>
+			      		<input type="tel" class="form-control" id="tel" name="tel">
+			    	</div>
+			    	<div class="form-group">
+				      	<label for="comment">Megjegyzés:</label>
+				      	<textarea class="form-control" rows="5" id="comment" name="text"></textarea>
+				    </div>
+			    	<div class="form-group form-check">
+			      		<label class="form-check-label">
+			        	<input class="form-check-input" type="checkbox" name="remember"> Kérek hírlevelet
+			      		</label>
+			   		</div>
+			    	<button type="submit" class="btn btn-primary mx-auto">Küldés</button>
+			  	</form>
+			</div>
+		</div>
+		<!-- VÉGE -->
+
+		<!-- kapcsolat -->
+		<div id="kapcsolat" class="container-fluid bg-primary" style="height: 150px; padding-top: 70px;">
+			<h3 class="h3 text-light mt-3 pt-2 text-center">Kapcsolat</h3>
+			<div class="container text-center pt-3" style="font-size: 2.5rem">
+				<a href="https://www.gmail.com" class="fas fa-envelope py-2 px-4 text-dark"></a>
+				<a href="https://www.facebook.com" class="fab fa-facebook-square py-2 px-4 text-dark"></a>
+				<a href="https://www.twittwr.com" class="fab fa-twitter-square py-2 px-4 text-dark"></a>
+				<a href="https://www.linkedin.com" class="fab fa-linkedin py-2 px-4 text-dark"></a>
+				<a href="https://www.instagram.com" class="fab fa-instagram py-2 px-4 text-dark"></a>
+				<a href="#" class="fas fa-phone-square py-2 px-4 text-dark" name="tel"></a>
+			</div>
+		</div>
+		<!-- VÉGE -->
+
+		<!-- footer -->
+		<div class="container-fluid bg-secondary" style="height: 50px">
+			<h5 class="h5 text-center pt-3" style="font-size: 1rem;">Copyright © 2018 Zsolt</h5>
+		</div>
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
