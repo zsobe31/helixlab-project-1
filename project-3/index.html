@@ -1,1 +1,659 @@
+<!DOCTYPE html>
+<html>
+	<head>
+
+		<title>bootstrap-gyakorlo</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+		<link href="https://fonts.googleapis.com/css?family=Raleway:300" rel="stylesheet">
+		<script src="https://unpkg.com/ionicons@4.2.4/dist/ionicons.js"></script>
+
+		<style type="text/css">
+			
+			body, html {
+			    height: 100%;
+			    margin: 0;
+			  	font-family: 'Raleway', sans-serif;		
+			}
+			section {
+				padding: 20px 0;
+			}
+
+			/* kezdőlap */
+			.hatter1 {
+				background: url('sakk5.jpg');
+		    	height: 100%; 
+			    background-position: center;
+			    background-repeat: no-repeat;
+			    background-size: cover;
+			    background-attachment: fixed;
+			}
+			.doboz {
+				position: absolute;
+				top: 45%;
+				left: 5%;
+				color: white;
+			}			
+			.doboz h1 {
+				font-size: 3rem;
+			}			
+			.gomb1, .gomb2 {
+				padding: 0.8rem 1.7rem;
+				font-size: 1rem;
+				border-radius: 25px;
+				border: 1px solid #e67e22;
+			}			
+			.gomb1 {
+				color: white;
+				background-color: #e67e22;
+			}			
+			.gomb2 {
+				background-color: rgba(0,0,0,0);
+				color: white;
+				border: 1px solid white;
+				margin-left: 1rem;
+			}			
+			.gomb1:hover {
+				background-color: #cf6d17;
+				transition: 0.2s;
+			}			
+			.gomb2:hover {
+				background-color: #cf6d17;
+				color: white;
+				transition: 0.2s;
+				border: 1px solid #e67e22;				
+			}
+
+			/* navigáció */
+			.nav {
+				position: absolute;
+				top: 5%;
+				right: 5%;
+			}			
+			.felso ul li {
+				display: inline;
+				list-style-type: none;
+				color: white;
+				text-transform: uppercase;
+				padding: 0 1rem;
+				font-size: 1.2rem;
+			}			
+			.felso a {
+				color: white;
+				text-decoration: none;
+				padding-bottom: 0.5rem;
+			}			
+			.felso ul a:hover {
+				border-bottom: 2px solid #e67e22;
+				text-decoration: none;
+				color: lightgray;
+				transition: 0.2s;
+			}
+
+			/* tartalom háttér */
+			#hatter2 {
+				background: url('sakk25.jpg');
+				/* height: 160%;
+				background-position: center;
+				background-repeat: no-repeat; */
+				background-size: cover;
+				background-attachment: fixed;
+			}
+
+			/* első vélemény háttér */
+			.hatter3 {
+				position: relative;
+				background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sakk6.jpg');
+				height: 75%;
+				background-size: cover;
+				background-attachment: fixed;
+				color: #fff;
+			}
+
+			/* második vélemény háttér */
+			.hatter4 {
+				position: relative;
+				background: url('sakk10.jpg');
+				width: auto;
+				height: 75%;
+				background-size: cover;
+				background-attachment: fixed;
+				color: #fff;
+			}
+
+			/* harmadik vélemény háttér */
+			.hatter5 {
+				position: relative;
+				background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('sakk9.jpg');
+				width: auto;
+				height: 75%;
+				background-size: cover;
+				background-attachment: fixed;
+				color: #fff;
+			}
+
+			/* form háttér */
+			.hatter6 {
+				position: relative;
+				background: url('wall2.jpg');
+				width: auto;
+				height: 110%;
+				background-size: cover;
+				background-attachment: fixed;
+			}
+
+			/* h2 címsorok alatti narancs vonal */
+			h2:after {
+				display: block;
+			    height: 2px;
+			    background-color: #e67e22;
+			    content: " ";
+			    width: 250px;
+			    margin: 30px auto 0 auto;
+			}
+
+			/* tartalom formázása */
+			.tartalom {
+				font-size: 130%;
+			    word-spacing: 5px;
+			    letter-spacing: 1px;
+			    text-transform: uppercase;
+			    padding-right: 10%;
+			    padding-top: 5%;
+			}
+
+			/* vélemények jobbra igazítás */
+			.test-text-box {
+				position: absolute;
+			    top: 20%;
+			    left: 70%;
+			}
+
+			/* vélemények balra igazítás */
+			.test-text-box-left {
+				position: absolute;
+			    top: 20%;
+			    right: 70%;
+			}
+
+			/* vélemény szöveg, kép formázása */		
+			cite {
+			    font-size: 90%;
+			    margin-top: 25px;
+			    display: block;
+			}
+			cite img {
+			    height: 65px;
+			    border-radius: 50%;
+			    margin-right: 10px;
+			    vertical-align: middle;
+			}
+			blockquote {
+			    padding: 2%;
+			    font-style: italic;
+			    line-height: 145%;
+			    position: relative;
+			    margin-top: 40px;
+			    font-size: 20px;
+			}
+
+			/* vélemények melletti függőleges vonal */
+			.hatter3 blockquote {
+			    text-align: left;
+			    position: relative;
+			    right: 40%;
+			    top: -30px;
+			    font-size: 120%;
+			    width: 130%;
+			    padding:20px;
+			    padding-right: 15px;
+			    border-right: 3px solid #e67e22;
+			}
+			.hatter4 blockquote {
+			    color: #fff;
+			    text-align: right;
+			    position: relative;
+			    left: 10%;
+			    top: -30px;
+			    font-size: 120%;
+			    width: 130%;
+			    padding-left: 25px;
+			    border-left: 3px solid #30ed87;
+			    text-align: left;
+			}
+			.hatter5 blockquote {
+			    text-align: left;
+			    position: relative;
+			    right: 40%;
+			    top: -30px;
+			    font-size: 120%;
+			    width: 130%;
+			    padding:20px;
+			    padding-right: 15px;
+			    border-right: 3px solid #ec64bc;
+			}
+
+			/* termékek doboz */
+			.shop-box {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			/* termékek képek */
+			.shop-box img {
+			    /*padding: 15px;*/
+			    height: 300px;
+			    width: 300px;
+			    border-radius: 50%;
+			    text-align: center;
+			}
+
+			/* termékek gombok */
+			.btn {
+				display: inline-block; 
+			    padding: 10px 30px;
+			    font-weight: 300%;
+			    text-decoration: none;
+			    border-radius: 200px;
+			    transition: background-color 0.2s, border 0.2s, color 0.2s;
+			}
+
+			/* rendeld meg gombok */
+			.btn-info {
+				display: flex;
+    			justify-content: center;
+			}
+
+			/* rendeled meg dobozok formázása */
+			.rendeld {
+				background-color: #fff;
+			    border-radius: 5px;
+			    width: 90%;
+			    margin-left: 6%;
+			}
+
+			/* rendeld meg árak formázása */
+			.price {
+				color: orange;
+				font-size: 3rem;
+			}
+
+			/* termékek és a rendeld meg most háttér */ 
+			.vaszon {
+				background: url('wall3.jpg');
+			    background-size: cover;
+			}
+			
+		</style>
+
+	</head>
+	<body>
+
+		<!-- főoldal -->
+		<section class="hatter1">
+
+			<!-- szöveg doboz -->
+			<div class="doboz">
+				<h1 class="text-uppercase pb-2">Hello Geeks.<br>Take on our adventure.</h1>
+				<button class="gomb1">Let's start</button>
+				<button class="gomb2">Show me more</button>
+			</div>
+			<!-- szövegdoboz VÉGE -->
+
+			<!-- navigáció -->
+			<nav class="navbar navbar-expand-sm navbar-dark felso">
+				<a class="navbar-brand ml-5" href="#">
+					<img src="sakk9.jpg" alt="Logo" style="border-radius:50%; width:60px; height:60px;">
+				</a>
+				<ul class="navbar-nav ml-auto">
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">About us</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Blog</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Press</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Mobile app</a>
+	    			</li>
+	  			</ul>
+			</nav> 
+			<!-- navigáció VÉGE -->
+
+		</section>
+		<!-- főoldal VÉGE -->
+
+		<!-- vászon a tartalomhoz -->
+		<section id="hatter2" class="container-fluid mb-3 img-fluid">
+
+			<!-- tartalom -->
+			<div class="container-fluid py-3 text-dark">
+				<h2 class="h2 my-3 text-center">You can play anywhere, with anyone.</h2>
+
+				<div class="row">
+					<div class="col-12 col-md-6 mb-3">
+						<img class="img-fluid my-3" src="sakk1.jpg" style="width: 60%; border-radius: 10px; margin-left: 10%; float: right;">
+					</div>
+					<div class="col-12 col-md-6 tartalom">						
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Nulla est.
+					</div>
+				</div>
+
+
+				<div class="row">
+					<div class="col-12 col-md-6 mb-3">
+						<img class="img-fluid my-3" src="sakk7.jpg" style="width: 60%; border-radius: 10px; margin-left: 10%; float: right;">
+					</div>
+					<div class="col-12 col-md-6 tartalom">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Nulla est.
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="col-12 col-md-6 mb-3">
+						<img class="img-fluid my-3" src="sakk22.jpg" style="width: 60%; border-radius: 10px; margin-left: 10%; float: right;">
+					</div>
+					<div class="col-12 col-md-6 tartalom">
+						Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Nulla est.
+					</div>
+				</div>
+
+			</div>
+			<!-- tartalom VÉGE -->
+
+		</section>
+		<!-- vászon a tartalomhoz VÉGE -->
+
+		<!-- miért válassz minket tartalom -->
+		<section class="container-fluid">
+
+			<div class="text-center">
+				<h2 class="h2 my-3">WHY TO CHOOSE US?</h2>
+				<p>Hello, we're here for you.<br> 
+				Whether you're a seasoned expert or just a newbie, this is the perfect place for you!</p>
+			</div>
+
+			<div class="row my-5">
+
+				<div class="col-6 box text-justify" style="padding: 0 2rem 0 2rem">
+					<ion-icon name="pulse" size="large"></ion-icon>
+					<h3>Up to 365 days/year</h3>
+        			 <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                    </p>
+				</div>
+
+				<div class="col-6 box text-justify" style="padding: 0 2rem 0 2rem">
+					<ion-icon name="pulse" size="large"></ion-icon>
+					<h3>Up to 365 days/year</h3>
+        			 <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                    </p>
+				</div>
+
+				<div class="col-6 box text-justify" style="padding: 0 2rem 0 2rem">
+					<ion-icon name="pulse" size="large"></ion-icon>
+					<h3>Up to 365 days/year</h3>
+        			 <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                    </p>
+				</div>
+
+				<div class="col-6 box text-justify" style="padding: 0 2rem 0 2rem">
+					<ion-icon name="pulse" size="large"></ion-icon>
+					<h3>Up to 365 days/year</h3>
+        			 <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.
+                    </p>
+				</div>
+
+			</div>
+
+		</section>
+		<!-- miéert válassz minket VÉGE -->
+
+		<!-- vélemények --> 
+		<section class="hatter3">
+			<div class="test-text-box">
+				<blockquote class="mr-2">
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Nulla est. Sed ac dolor sit amet purus malesuada congue. Etiam neque. Nulla est.
+                	<cite class="welcome-cite"><img src="face1.jpg"> <br> Grimace </cite>
+            	</blockquote>
+			</div>
+		</section>
+
+		<section class="hatter4">
+			<div class="test-text-box-left">
+				<blockquote class="ml-2">
+                      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Nulla est. Sed ac dolor sit amet purus malesuada congue. Etiam neque. Nulla est.
+                	<cite class="welcome-cite"><img src="face2.jpg"> <br> Hatter </cite>
+            	</blockquote>
+			</div>
+		</section>
+
+		<section class="hatter5">
+			<div class="test-text-box">
+				<blockquote class="mr-2">
+	                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean fermentum risus id tortor. Nulla est. Sed ac dolor sit amet purus malesuada congue. Etiam neque. Nulla est.
+                	<cite class="welcome-cite"><img src="face3.jpg"> <br> Girl </cite>
+            	</blockquote>
+			</div>
+		</section>
+		<!-- vélemények VÉGE -->
+
+		<!-- termékekhez és a rendeld meg mosthoz vászon -->
+		<section class="vaszon">
+
+			<!-- termékek -->
+			<section class="shop">
+				<h2 class="h2 text-center">Our products</h2>
+				<div class="container mt-5">
+
+					<div class="row">
+
+						<div class="col-12 col-lg-4 shop-box">
+							<div class="kep">
+								<img class="img-fluid px-auto d-block" src="product1.jpg">
+							</div>											
+						</div>
+
+						<div class="col-12 col-lg-4 shop-box">
+							<div class="kep">
+								<img class="img-fluid px-auto d-block" src="sakk8.jpg">
+							</div>										
+						</div>
+
+						<div class="col-12 col-lg-4 shop-box">
+							<div class="kep">
+								<img class="img-fluid px-auto d-block" src="sakk12.jpg">
+							</div>											
+						</div>
+
+					</div>
+
+					<div class="row mt-5">
+
+						<div class="col-12 col-lg-4">
+							<div class="gomb">
+								<a class="btn mx-auto d-block" href="#">
+									<img src="figure1.jpg" width="140" height="60" style="border-radius: 30px">
+								</a>
+							</div>	
+						</div>
+
+						<div class="col-12 col-lg-4">
+							<div class="gomb">
+								<a class="btn mx-auto d-block" href="#">
+									<img src="figure2.jpg" width="140" height="60" style="border-radius: 30px">							
+								</a>
+							</div>		
+						</div>
+
+						<div class="col-12 col-lg-4">
+							<div class="gomb">
+								<a class="btn mx-auto d-block" href="#">
+									<img src="figure3.jpg" width="140" height="60" style="border-radius: 30px">							
+								</a>
+							</div>	
+						</div>
+
+					</div>
+
+				</div>
+
+			</section>
+			<!-- termékek VÉGE -->
+
+			<!-- vízszintes vonal -->
+			<hr width="75%">
+
+			<!-- rendeld meg most -->
+			<section class="container-fluid">
+
+				<h2 class="h2 text-center">Sort it now</h2>
+				<div class="row mt-5">
+
+					<div class="col-md-3 rendeld">					
+						<h3 class="h3 pt-2">Figures</h3><br>
+						<p class="price">Price: 1€</p>
+						<hr width="75%">
+						<h3>Now accio</h3><br>
+						<p>expensive price:</p><br>
+						<p class="price text-center">2.5€</p>
+						<hr width="75%">
+						<a class="btn btn-info mx-auto d-block mb-2" href="#" style="width: 7rem">Buying!</a>
+					</div>
+
+					<div class="col-md-3 rendeld">
+						<h3 class="h3 pt-2">Table</h3><br>
+						<p class="price">Price: 2€</p>
+						<hr width="75%">
+						<h3>Now accio</h3><br>
+						<p>expensive price:</p><br>
+						<p class="price text-center">2.5€</p>
+						<hr width="75%">
+						<a class="btn btn-info mx-auto d-block mb-2" href="#" style="width: 7rem">Buying!</a>
+					</div>
+
+					<div class="col-md-3 rendeld">
+						<h3 class="h3 pt-2">Set</h3><br>
+						<p class="price">Price: 3€</p>
+						<hr width="75%">
+						<h3>Now accio</h3><br>
+						<p>expensive price:</p><br>
+						<p class="price text-center">2.5€</p>
+						<hr width="75%">
+						<a class="btn btn-info mx-auto d-block mb-2" href="#" style="width: 7rem">Buying!</a>
+					</div>
+
+				</div>
+
+			</section>
+			<!-- rendeld meg most VÉGE -->
+
+		</section>
+		<!-- termékekhez és a rendeld meg mosthoz vászon VÉGE -->
+
+		<!-- form sections -->
+		<section class="form hatter6">
+
+			<h2 class="h2 text-center">Order</h2>
+			<div class="container mt-5">
+
+				<form action="valami.php" class="mx-auto" style="width: 75%">
+
+					<div class="form-group">
+			      		<label for="name">Name:</label>
+			      		<input type="text" class="form-control" id="name" name="name" style="opacity: 0.5">
+			    	</div>
+
+			    	<div class="form-group">
+			      		<label for="email">Email:</label>
+			      		<input type="email" class="form-control" id="email" name="email" style="opacity: 0.5">
+			    	</div>
+
+			    	<div class="form-group">
+			      		<label for="text">How did you find us:</label>
+			      		<input type="text" class="form-control" id="text" name="text" style="opacity: 0.5">
+			    	</div>
+
+			    	<div class="form-group">
+				      	<label for="comment">Tell us your opinion:</label>
+				      	<textarea class="form-control" rows="5" id="comment" name="text" style="opacity: 0.5"></textarea>
+				    </div>
+
+			    	<div class="form-group form-check text-center py-3">
+			      		<label class="form-check-label">			    		
+			        	<input class="form-check-input" type="checkbox" name="remember" style="opacity: 0.5"> Newsletter?
+			      		</label>
+			   		</div>
+
+			    	<button type="submit" class="btn mx-auto d-block" style="background: #e67e22">Send it!</button>
+
+				</form>
+
+			</div>
+
+		</section>
+		<!-- form sections VÉGE -->
+
+		<!-- footer -->
+		<section class="container-fluid bg-secondary py-3">
+
+			<nav class="navbar navbar-expand-sm navbar-dark">
+
+				<!-- footer navi balra -->
+				<ul class="navbar-nav mr-auto">
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">About us</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Blog</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Press</a>
+	    			</li>
+	    			<li class="nav-item mr-2">
+	      				<a class="nav-link" href="#">Mobile app</a>
+	    			</li>
+	  			</ul>
+
+	  			<!-- footer navi jobbra -->
+	  			<ul class="navbar-nav ml-auto">
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="#"><ion-icon name="logo-facebook" size="large"></ion-icon></a>
+	  				</li>
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="#"><ion-icon name="mail" size="large"></ion-icon></a>
+	  				</li>
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="#"><ion-icon name="logo-linkedin" size="large"></ion-icon></a>
+	  				</li>
+	  				<li class="nav-item mr-3"> 
+	  					<a class="nav-link" href="#"><ion-icon name="logo-instagram" size="large"></ion-icon></a>
+	  				</li>
+	  			</ul>
+
+			</nav> 
+
+			<h5 class="h5 text-center py-3">Copyright © 2018 by Zsolt</h5>
+
+		</section>
+		<!-- footer VÉGE -->
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	</body>
+</html>
+
+
+
+
 
